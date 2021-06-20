@@ -95,7 +95,7 @@ for selecting groups of messages.
 %setup -q
 # Do not run "./prepare -V", because it also runs "./configure".
 
-%patch10 -p1 -b .lynx_no_backscapes
+# %patch10 -p1 -b .lynx_no_backscapes
 %patch12 -p1 -b .nodotlock
 
 autoreconf --install
