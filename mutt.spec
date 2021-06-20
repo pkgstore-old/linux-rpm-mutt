@@ -44,7 +44,7 @@ Patch3:                         mutt-1.7.0-syncdebug.patch
 # FIXME make it to upstream.
 Patch8:                         mutt-1.5.23-system_certs.patch
 Patch9:                         mutt-1.9.0-ssl_ciphers.patch
-Patch10:                        mutt-1.9.4-lynx_no_backscapes.patch
+# Patch10:                      mutt-1.9.4-lynx_no_backscapes.patch
 Patch12:                        mutt-1.9.5-nodotlock.patch
 Patch13:                        mutt-1.12.1-optusegpgagent.patch
 
