@@ -4,7 +4,27 @@
 
 The Mutt slogan is "All mail clients suck. This one just sucks less."
 
-## How it works
+## Install
+
+### Fedora COPR
+
+```
+$ dnf copr enable pkgstore/mutt
+```
+
+### Open Build Service (OBS)
+
+```
+# Work in Progress
+```
+
+## Update
+
+```
+$ dnf upgrade -y mutt
+```
+
+## How to Build
 
 1. Get source from [src.fedoraproject.org](https://src.fedoraproject.org/rpms/mutt).
 2. Write last commit SHA from [src.fedoraproject.org](https://src.fedoraproject.org/rpms/mutt) to [CHANGELOG](CHANGELOG).
