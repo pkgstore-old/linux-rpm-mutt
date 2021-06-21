@@ -10,6 +10,7 @@ The Mutt slogan is "All mail clients suck. This one just sucks less."
 
 ```
 $ dnf copr enable pkgstore/mutt
+$ dnf install -y mutt
 ```
 
 ### Open Build Service (OBS)
