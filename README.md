@@ -25,6 +25,13 @@ $ dnf install -y mutt
 $ dnf upgrade -y mutt
 ```
 
+## Remove
+
+```
+$ dnf erase -y mutt
+$ dnf copr remove pkgstore/mutt
+```
+
 ## How to Build
 
 1. Get source from [src.fedoraproject.org](https://src.fedoraproject.org/rpms/mutt).
