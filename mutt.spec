@@ -20,7 +20,7 @@
 %global release_prefix          100
 
 Name:                           mutt
-Version:                        2.1.0
+Version:                        2.1.1
 Release:                        %{release_prefix}%{?dist}
 Epoch:                          5
 Summary:                        A text mode mail user agent
@@ -95,7 +95,7 @@ for selecting groups of messages.
 %setup -q
 # Do not run "./prepare -V", because it also runs "./configure".
 
-# %patch10 -p1 -b .lynx_no_backscapes
+%patch10 -p1 -b .lynx_no_backscapes
 %patch12 -p1 -b .nodotlock
 
 autoreconf --install
