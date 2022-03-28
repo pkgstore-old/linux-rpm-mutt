@@ -20,7 +20,7 @@
 %global release_prefix          100
 
 Name:                           mutt
-Version:                        2.1.1
+Version:                        2.2.2
 Release:                        %{release_prefix}%{?dist}
 Epoch:                          5
 Summary:                        A text mode mail user agent
@@ -230,6 +230,36 @@ echo "# Local configuration for Mutt." > \
 
 
 %changelog
+* Mon Mar 28 2022 Package Store <mail@z17.dev> - 5:2.2.2-100
+- UPD: Rebuild by Package Store.
+
+* Mon Mar 28 2022 Matej Mužila <mmuzila@redhat.com> - 5:2.2.2-1
+- Upgrade to 2.2.2
+  Resolves: #2068653
+
+* Tue Feb 22 2022 Matej Mužila <mmuzila@redhat.com> - 5:2.2.1-1
+- Upgrade to 2.2.1
+  Resolves: #2053874
+
+* Wed Feb 16 2022 Matej Mužila <mmuzila@redhat.com> - 5:2.2.0-1
+- Upgrade to 2.2.0
+  Resolves: #2053874
+
+* Thu Jan 20 2022 Fedora Release Engineering <releng@fedoraproject.org> - 5:2.1.5-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_36_Mass_Rebuild
+
+* Mon Jan 03 2022 Matej Mužila <mmuzila@redhat.com> - 5:2.1.5-1
+- Upgrade to 2.1.5
+
+* Mon Oct 25 2021 Matej Mužila <mmuzila@redhat.com> - 5:2.1.3-1
+- Upgrade to 2.1.3
+
+* Tue Aug 10 2021 Matej Mužila <mmuzila@redhat.com> - 5:2.1.1-1
+- Upgrade to 2.1.1
+
+* Thu Jul 22 2021 Fedora Release Engineering <releng@fedoraproject.org> - 5:2.0.7-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
+
 * Sun Jun 20 2021 Package Store <kitsune.solar@gmail.com> - 5:2.1.0-100
 - UPD: Move to GitHub.
 - UPD: License.

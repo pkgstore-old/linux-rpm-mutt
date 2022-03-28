@@ -4,7 +4,7 @@ diff -rup mutt-17a4f92e4a95-orig/init.h mutt-17a4f92e4a95-new/init.h
 @@ -2989,7 +2989,7 @@ struct option_t MuttVars[] = {
    */
  #if defined(USE_SSL)
- #ifdef USE_SSL_GNUTLS
+ # ifdef USE_SSL_GNUTLS
 -  { "ssl_ca_certificates_file", DT_PATH, R_NONE, {.p=&SslCACertFile}, {.p=0} },
 +  { "ssl_ca_certificates_file", DT_PATH, R_NONE, {.p=&SslCACertFile}, {.p="/etc/ssl/certs/ca-bundle.crt"} },
    /*
