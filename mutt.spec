@@ -17,7 +17,7 @@
 
 %{!?_pkgdocdir: %global _pkgdocdir %{_docdir}/%{name}-%{version}}
 
-%global release_prefix          100
+%global release_prefix          1000
 
 Name:                           mutt
 Version:                        2.2.2
@@ -32,10 +32,8 @@ Vendor:                         Package Store <https://pkgstore.github.io>
 Packager:                       Kitsune Solar <kitsune.solar@gmail.com>
 
 # HG snapshot created from http://dev.mutt.org/hg/mutt
-Source0:                        ftp://ftp.mutt.org/pub/%{name}/%{name}-%{version}.tar.gz
+Source0:                        %{name}/%{name}-%{version}.tar.xz
 Source1:                        mutt_ldap_query
-# Signature.
-Source900:                      ftp://ftp.mutt.org/pub/%{name}/%{name}-%{version}.tar.gz.asc
 
 Patch1:                         mutt-1.10.0-muttrc.patch
 Patch2:                         mutt-1.8.0-cabundle.patch
@@ -126,33 +124,33 @@ fi
 %configure \
   SENDMAIL=%{_sbindir}/sendmail   \
   ISPELL=%{_bindir}/hunspell      \
-  %{?with_debug:	--enable-debug} \
-  %{?with_pop:	--enable-pop}     \
-  %{?with_imap:	--enable-imap}    \
-  %{?with_smtp:	--enable-smtp}    \
+  %{?with_debug: --enable-debug}  \
+  %{?with_pop: --enable-pop}      \
+  %{?with_imap: --enable-imap}    \
+  %{?with_smtp: --enable-smtp}    \
 \
   %if %{with hcache}
   --enable-hcache                                 \
-  %{!?with_tokyocabinet:	--without-tokyocabinet} \
-  %{!?with_gdbm:	--without-gdbm}                 \
-  %{!?with_qdbm:	--without-qdbm}                 \
+  %{!?with_tokyocabinet: --without-tokyocabinet}  \
+  %{!?with_gdbm: --without-gdbm}                  \
+  %{!?with_qdbm: --without-qdbm}                  \
   %endif
 \
   %if %{with imap} || %{with pop} || %{with smtp}
-  %{?with_gnutls:	--with-gnutls}  \
-  %{?with_sasl:	--with-sasl}      \
+  %{?with_gnutls: --with-gnutls}  \
+  %{?with_sasl: --with-sasl}      \
   %endif
 \
   %if %{with imap}
-  %{?with_gss:	--with-gss} \
+  %{?with_gss: --with-gss} \
   %endif
 \
-  %{?with_idn:	--with-idn}       \
-  %{!?with_idn:	--without-idn}    \
-  %{?with_idn2:   --with-idn2}    \
-  %{!?with_idn2:  --without-idn2} \
+  %{?with_idn: --with-idn}        \
+  %{!?with_idn: --without-idn}    \
+  %{?with_idn2: --with-idn2}      \
+  %{!?with_idn2: --without-idn2}  \
 \
-  %{?with_gpgme:	--enable-gpgme}     \
+  %{?with_gpgme: --enable-gpgme}      \
   %{?with_sidebar: --enable-sidebar}  \
   --with-docdir=%{_pkgdocdir}
 
@@ -230,7 +228,11 @@ echo "# Local configuration for Mutt." > \
 
 
 %changelog
-* Mon Mar 28 2022 Package Store <mail@z17.dev> - 5:2.2.2-100
+* Thu Mar 31 2022 Package Store <pkgstore@mail.ru> - 5:2.2.2-1000
+- UPD: Rebuild by Package Store.
+- UPD: File "mutt.spec".
+
+* Mon Mar 28 2022 Package Store <pkgstore@mail.ru> - 5:2.2.2-100
 - UPD: Rebuild by Package Store.
 
 * Mon Mar 28 2022 Matej Mužila <mmuzila@redhat.com> - 5:2.2.2-1
@@ -259,10 +261,6 @@ echo "# Local configuration for Mutt." > \
 
 * Thu Jul 22 2021 Fedora Release Engineering <releng@fedoraproject.org> - 5:2.0.7-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
-
-* Sun Jun 20 2021 Package Store <kitsune.solar@gmail.com> - 5:2.1.0-100
-- UPD: Move to GitHub.
-- UPD: License.
 
 * Fri May  7 2021 Dan Čermák <dan.cermak@cgc-instruments.com> - 5:2.0.7-2
 - Ship the mutt_oauth2.py script as well
