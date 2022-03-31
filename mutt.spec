@@ -17,7 +17,7 @@
 
 %{!?_pkgdocdir: %global _pkgdocdir %{_docdir}/%{name}-%{version}}
 
-%global release_prefix          1000
+%global release_prefix          1001
 
 Name:                           mutt
 Version:                        2.2.2
@@ -28,11 +28,9 @@ Summary:                        A text mode mail user agent
 # pgpewrap.c setenv.c sha1.c wcwidth.c which are Public Domain
 License:                        GPLv2+ and Public Domain
 URL:                            http://www.mutt.org
-Vendor:                         Package Store <https://pkgstore.github.io>
-Packager:                       Kitsune Solar <kitsune.solar@gmail.com>
 
 # HG snapshot created from http://dev.mutt.org/hg/mutt
-Source0:                        %{name}/%{name}-%{version}.tar.xz
+Source0:                        %{name}-%{version}.tar.xz
 Source1:                        mutt_ldap_query
 
 Patch1:                         mutt-1.10.0-muttrc.patch
@@ -228,6 +226,10 @@ echo "# Local configuration for Mutt." > \
 
 
 %changelog
+* Thu Mar 31 2022 Package Store <pkgstore@mail.ru> - 5:2.2.2-1001
+- UPD: Rebuild by Package Store.
+- FIX: File "mutt.spec".
+
 * Thu Mar 31 2022 Package Store <pkgstore@mail.ru> - 5:2.2.2-1000
 - UPD: Rebuild by Package Store.
 - UPD: File "mutt.spec".
